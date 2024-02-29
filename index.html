@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTP Generator</title>
+<link rel="stylesheet" href="otp.css">
+</head>
+<body>
+    <div class="main">
+        <h1>OTP Generator</h1><br>
+        <div><p>OTP is:- <span id="otpoutput"></span></p></div><br>
+        <input id="input" type="text">
+        <button id="verify">verification</button>
+    </div>
+    <script>
+        generateOTP()
+        function generateOTP() {
+        let OTP =Math.floor(Math.random()*9999);
+        if(OTP<1000)
+        OTP=OTP+'0'
+        document.getElementById('otpoutput').innerText = OTP;
+        }
+        setInterval(generateOTP,5000)
+        let input=document.getElementById('input')
+        let verify=document.getElementById('verify')
+        verify.addEventListener("click",()=>{
+        if(input.value==OTP){
+            alert("valid OTP")
+        }
+        else{
+            alert("Invalid OTP")
+        }})
+    </script>
+</body>
+</html>

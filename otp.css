@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: rgb(208, 170, 170);
+  }
+  .main {
+    height: 150px;
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-radius: 10px;
+    
+  }
+  #otpoutput {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  #verify{
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color:blue;
+    color: white;
+  }
